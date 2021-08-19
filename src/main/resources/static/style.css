@@ -1,0 +1,162 @@
+header{
+    background-color: dodgerblue; /*define a cor do cabeçalho*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 70px; /*altura do cabeçalho*/
+    box-shadow: 0 1px 2px #CCC; /*adiciona um efeito de sombra em volta do elemento*/
+}
+
+div.container{
+	/*width: 1024px;*/
+	margin: 0 auto; /* topo e inferior: margem de 0 |caixa está horizontalmente centralizada */
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu{
+    margin-top: 20px;
+    float: center;
+}
+
+#menu a{
+    padding: 20px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+menu a:hover{
+    background-color: yellow;
+    color: white;
+    font-weight: bold;
+    padding: 30px;
+    -webkit-transition: 0.4s;
+}
+
+*{/*elimina as configurações do browser*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100vh; /*permite que o tamanho do body aumente conforme for acrescentando conteúdo*/
+    display: flex; /*define o elemento como um container flexisível*/
+    flex-direction:column; /*define a direção dos elementos verticalmente da esquerda para a direita*/
+}
+
+section#logo{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+section{
+    /*display: grid;*/
+    display: flex; /*define o elemento como um container flexisível*/
+    align-content: center;
+    flex-grow: 1; /*fator de crescimento de um item, ou seja, quanto do espaço restante deve ser atribuído ao item*/
+    flex-direction: column; /*define a direção dos elementos verticalmente da esquerda para a direita*/
+    /*align-items: flex-start; /* Posiciona itens-flex a partir do início */
+    width: 525px; /*aplica uma largura de 90% ao conteúdo principal do documento*/
+    margin: auto;
+    margin-top: 10px; /*auto quer dizer que a caixa está horizontalmente centralizada*/
+    padding: 50px;/*aplica um valor de 50 pixels a toda a margem interna do rodapé (topo-esquerda-em baixo-direita)*/
+    box-shadow: 2px 2px 10px #CCC; /*adiciona um efeito de sombra em volta do elemento*/
+    gap: 20px; /*define as lacunas (espaços) entre as linhas e colunas da grade do documento principal*/
+}
+
+footer{
+    width: 100; /*largura do rodapé*/
+    text-align: center; /*alinha o texto no centro*/
+    font-weight: 200; /*tamanho da fonte*/
+    font-style: italic; /*define o estilo da fonte como itálico*/
+    padding: 20px; /*aplica um valor de 20 pixels a toda a margem interna do rodapé (topo-esquerda-em baixo-direita)*/
+}
+
+#registros{
+    width: 100%; /*aplica uma largura (espaçamento) de 100% aos elementos da tabela*/
+    user-select: none; /*não permite que o texto seja selecionado. sem ela, conseguimos selecionar os textos*/
+    text-align: left; /*alinha o texto a esquerda*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#registros th{
+    height: 50px; /*define a altura da célula de cabeçalho da tabela com 50 pixels*/
+    background-color:darkkhaki; /*define a cor do cabeçalho*/
+    padding-left: 20px; /*define a largura da área de preenchimento à esquerda de cada célula do cabeçalho da tabela.*/
+    text-align: center; /*alinha os textos das células no centro*/
+}
+
+#registros td{
+    height: 50px; /*define a altura das célula da tabela com 50 pixels*/
+    padding-left: 20px; /*define a largura da área de preenchimento à esquerda de cada célula da tabela.*/
+    text-align: center; /*alinha o texto no centro*/
+}
+
+div.formulario
+{
+    display: block;
+    text-align: center;
+    width: 450px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+form
+{
+    display: ;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#form{    
+    display:flex; /*define o elemento como um container flexisível*/
+    justify-content: space-between; /* Distribui os itens uniformemente. O primeiro item está alinhado com o início, o último está alinhado com o final */
+    flex-wrap: wrap; /*ajusta os espaços em quebra de linhas múltiplas de acordo com a largura de cada item do formulário*/
+    gap: 20px; /*define as lacunas (espaços) entre as linhas e colunas da grade do documento principal*/
+    padding: 0 20px;/*Margem interna: 0 acima e abaixo | 20px esquerda e direita*/
+}
+
+.input-text{
+    flex: 1; /*define como um ítem será posicionado no espaço disponível dentro de seu recipiente.*/
+    min-width: 210px; /*permite que a largura do input aumente, conforme for acrescentando texto*/
+    margin: 5px;  /*aplica um valor de 5 pixels a toda a margem externa do input (topo-esquerda-em baixo-direita)*/
+    height: 35px; /*define a altura do campo do input com 35 pixels*/
+    padding-left: 5px; /*define a largura da área de preenchimento à esquerda do elemento, ou seja, dos campos do input*/
+    border-radius: 10px; /*permite a inserção de bordas arredondadas*/
+    border-style: solid; /*especifica que tipo de borda a ser exibida. A propriedade pode ter de um a quatro valores (para a borda superior, borda direita, borda inferior e a borda esquerda)*/
+    border-width: 1px; /*larguraa da borda*/
+    border-color: #262626; /*especifíca a cor da borda*/
+    outline: none; /*especifica o estilo do contorno. none significa que não especifica nenhum esboço, ou seja, é padrão*/
+}
+
+.input-btn{
+    border-style: none; /*torna as bordas sem "efeito", ou seja, simples*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 40px; /*altura do botão*/
+    padding: 6px 12px; /*aplica um valor de 6 pixels acima e abaixo, e de 12 pixels na esquerda e na direita*/
+    background-color: #13CE66; /*define a cor do botão*/
+    cursor: pointer;/*define o tipo de cursor do mouse. O cursor é um ponteiro que indica um link. Tipicamente uma mão apontando*/
+}
+
+.atualiza-btn{
+    border-style: none; /*torna as bordas sem "efeito", ou seja, simples*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 40px; /*altura do botão*/
+    padding: 6px 12px; /*aplica um valor de 6 pixels acima e abaixo, e de 12 pixels na esquerda e na direita*/
+    background-color: #1FB6FF; /*define a cor do botão*/
+    cursor: pointer;/*define o tipo de cursor do mouse. O cursor é um ponteiro que indica um link. Tipicamente uma mão apontando*/
+}
+
+.remove-btn{
+    border-style: none; /*torna as bordas sem "efeito", ou seja, simples*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 40px; /*altura do botão*/
+    padding: 6px 12px; /*aplica um valor de 6 pixels acima e abaixo, e de 12 pixels na esquerda e na direita*/
+    background-color: #FF4949; /*define a cor do botão*/
+    cursor: pointer;/*define o tipo de cursor do mouse. O cursor é um ponteiro que indica um link. Tipicamente uma mão apontando*/
+}

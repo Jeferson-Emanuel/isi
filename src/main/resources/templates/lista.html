@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Cadastro</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<header>
+    <div class="container">
+        <div>
+
+        </div>
+        <div id="menu">
+            <a href="index">Home</a>
+            <a href="cadastro">Cadastro</a>
+        </div>
+    </div>
+</header>
+<body>
+<section>
+    <!--para cada cadastros desse, eu acesso o objeto que está dentro dele. Daí eu pego esse objeto cadastros e
+        acesso seus atributos. Daí eu consigo acessar esses atributos, com essa parte do thymeleaf th
+
+        Daí, para cada item que tiver no array (each), ele vai renderizar essa div para cada item-->
+    <div id="container" class="row" th:each="cadastros: ${cadastros}">
+        <p><label>ID: </label><span th:text=${cadastros.id}></span></p>
+        <p><label>Nome: </label><span th:text=${cadastros.nome}></span></p>
+        <p><label>Email: </label><span th:text=${cadastros.email}></span></p>
+        <p><label>Contato: </label><span th:text=${cadastros.contato}></span></p>
+        <p><label>Cidade: </label><span th:text=${cadastros.cidade}></span></p>
+        <a href="/edita">
+            <button class="atualiza-btn">Atualizar</button>
+        </a>
+        <a th:href="@{/lista/{id} (id = ${cadastros.id})}">
+            <button class="remove-btn">Deletar</button>
+        </a>
+    </div>
+</section>
+<footer>
+    Copyright; Jucyara, Jéferson e João Gabriel
+</footer>
+</body>
+</html>
