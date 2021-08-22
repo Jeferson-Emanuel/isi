@@ -14,6 +14,7 @@ public class Aluno {
     private String email;
     private String naturalidade;
     @ManyToOne
+    @JoinColumn(name="disciplina_id")
     private Disciplina disciplina;
 
     public Aluno() {

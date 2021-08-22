@@ -13,7 +13,7 @@ public class Disciplina {
 
     private String nome;
     private String professor;
-    @OneToMany
+    @OneToMany(mappedBy = "disciplina")
     private List<Aluno> aluno;
 
     public Disciplina() {

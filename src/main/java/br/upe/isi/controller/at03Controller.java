@@ -10,7 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.ui.Model;
 
 import java.util.List;
 
@@ -48,12 +50,20 @@ public class at03Controller {
 //    }
 
     @RequestMapping(value = "/aluno", method = RequestMethod.GET)
-    public String getAluno() {
+    public String getAluno(Model model) {
+        //List<Disciplina> disciplinas =  disciplinaRepository.findAll();
+        //ModelAndView model = new ModelAndView();
+        //model.addObject("disciplinas", disciplinaRepository.findAll());
+        model.addAttribute("disciplinas", disciplinaRepository.findAll());
         return "aluno";
     }
 
     @RequestMapping(value = "/aluno", method = RequestMethod.POST)
-    public String postAluno(Aluno aluno) {
+    public String postAluno(@RequestParam(value = "selecao", required = true) Integer id, Aluno aluno) {
+
+        Disciplina disciplina = disciplinaRepository.getById(id);
+
+        aluno.setDisciplina(disciplina);
 
         alunoRepository.save(aluno);/*chama a service, no caso o repositorio, para salvar esse objeto cadastro no banco de dados*/
 
